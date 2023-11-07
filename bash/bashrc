@@ -14,6 +14,3 @@ if test -z "${XDG_RUNTIME_DIR}"; then
         chmod 700 "${XDG_RUNTIME_DIR}"
     fi
 fi
-
-exec {BASH_XTRACEFD}>/dev/null
-. "$HOME/.cargo/env"
