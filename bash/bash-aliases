@@ -1,0 +1,37 @@
+#!/bin/env bash
+alias nvimrc='nvim ~/.config/nvim/'
+
+alias wget='wget --no-hsts'
+
+# colorized grep output
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# easier to read disk info
+alias df='df -h'
+alias free='free -m'
+
+# Get top process (memory)
+alias psmem='ps auxf | sort -nr -k 4 | head -5'
+
+# Get top process (CPU)
+alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+
+# GPG encryption
+alias gpg-check='gpg2 --keyserver-options auto-key-retrieve --verify'
+alias gpg-retrieve='gpg2 --keyserver-options auto-key-retrieve --receive-keys'
+
+# ls
+alias l='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+
+# Turn bash history on/off
+alias hisoff="set +o history"
+alias hison="set -o history"
+
+# Gentoo specific
+alias update="doas emaint -a sync"
+alias upgrade="doas emerge -aquDN @world"
+alias chuse="doas emerge -aquDU @world"

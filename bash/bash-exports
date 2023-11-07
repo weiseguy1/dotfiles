@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# XDG paths
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+# PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/lib:$PATH
+export PATH=$HOME/.local/share/cargo/bin:$PATH
+
+# HISTORY
+export HISTSIZE=2000
+export HISTFILESIZE=2000
+export HISTCONTROL=ignoredups
+
+# Python
+export PYTHONHISTFILE=/dev/null
+
+# General exports
+export LESSHISTFILE=-
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="alacritty"
+
+# Extras
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_pro_icd64.json
+export ANSIBLE_CONFIG=$XDG_CONFIG_HOME/ansible/ansible.cfg

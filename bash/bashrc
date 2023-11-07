@@ -1,0 +1,19 @@
+#!/bin/bash
+export BDOTDIR=$HOME/.config/bash
+
+# Base files
+source "$BDOTDIR/bash-exports"
+source "$BDOTDIR/bash-aliases"
+source "$BDOTDIR/bash-prompt"
+source "$BDOTDIR/bash-options"
+
+if test -z "${XDG_RUNTIME_DIR}"; then
+    export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+    if ! test -d "${XDG_RUNTIME_DIR}"; then
+        mkdir "${XDG_RUNTIME_DIR}"
+        chmod 700 "${XDG_RUNTIME_DIR}"
+    fi
+fi
+
+exec {BASH_XTRACEFD}>/dev/null
+. "$HOME/.cargo/env"

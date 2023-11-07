@@ -1,0 +1,19 @@
+layer=overlay
+background-color=#181a1c
+width=300
+height=110
+border-color=#24272e
+border-radius=0
+icons=1
+max-icon-size=64
+font=JetBrains Mono Nerd Font 14
+
+[urgency=low]
+border-color=#72cce8
+
+[urgency=normal]
+border-color=#9dd274
+
+[urgency=high]
+border-color=#ff6578
+default-timeout=0

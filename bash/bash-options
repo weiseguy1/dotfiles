@@ -1,0 +1,9 @@
+#!/bin/env bash
+
+# More info here: https://bash.cyberciti.biz/guide/Setting_shell_options
+
+shopt -s autocd
+shopt -q -s cdspell
+shopt -q -s extglob
+shopt -s histappend
+shopt -q -s cmdhist
