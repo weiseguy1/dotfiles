@@ -22,7 +22,7 @@ Here are some details about my setup:
 + **Terminal**: [Foot](https://codeberg.org/dnkl/foot)
 + **Editor**: [Neovim](https://neovim.io/)
 + **Launcher**: [Fuzzel](https://codeberg.org/dnkl/fuzzel)
-+ **Bar**: [Eww](https://github.com/elkowar/eww)
++ **Bar**: [Waybar](https://github.com/Alexays/Waybar)
 
 
 # Installation
@@ -39,13 +39,12 @@ emerge --sync wayland-desktop
 
 Install main packages:
 ```
-emerge -aq gui-wm/hyprland gui-apps/fuzzel gui-apps/mako app-editors/neovim gui-apps/eww gui-apps/foot
+emerge -aq gui-wm/hyprland gui-apps/fuzzel gui-apps/mako app-editors/neovim gui-apps/waybar gui-apps/foot
 ```
 
 To setup my bash config:
 ```
 mv ~/.bashrc ~/.bashrc.bak
-read -p "(Server or Desktop?): " deviceType; sed -i "s/DEVICE_TYPE=desktop/DEVICE_TYPE=$deviceType/1" $HOME/.config/bash/bash-prompt
 ln -s ~/.config/bash/bashrc ~/.bashrc
 source ~/.bashrc
 ```

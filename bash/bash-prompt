@@ -7,26 +7,15 @@ DIM="2"
 BLACK="$NORMAL;30m"
 RED="$BRIGHT;31m"
 GREEN="$NORMAL;32m"
-BROWN="$BRIGHT;33m" # BRIGHT + 33m = YELLOW
+BROWN="$BRIGHT;33m"
 BLUE="$BRIGHT;34m"
 PURPLE="$NORMAL;35m"
 CYAN="$NORMAL;36m"
 GRAY="$NORMAL;37m"
 
-# Changes colors/prompt based on either desktop or server
-DEVICE_TYPE=desktop
-
 if [ "$EUID" -ne 0 ]
 then
-    if [ "$DEVICE_TYPE" == "desktop" ]
-    then
-        PS1='\[\033[$BLUE\][\[\033[$GRAY\]\u\[\033[$RED\]@\[\033[$GRAY\]\h\[\033[$BLUE\]] \[\033[$GRAY\]\W $ '
-    elif [ "$DEVICE_TYPE" == "server" ]
-    then
-        PS1='\[\033[$PURPLE\][\[\033[$GRAY\]\u\[\033[$BROWN\]@\[\033[$GRAY\]\h\[\033[$PURPLE\]] \[\033[$GRAY\]\W % '
-    else
-        PS1='\u@\h \W '
-    fi
+    PS1='\[\033[$BLUE\][\[\033[$GRAY\]\u\[\033[$RED\]@\[\033[$GRAY\]\h\[\033[$BLUE\]] \[\033[$GRAY\]\W $ '
 else
     PS1='\[\033[$RED\][\[\033[$GRAY\]\u\[\033[$RED\]@\[\033[$GRAY\]\h\[\033[$RED\]] \[\033[$RED\]\W # \[\033[$GRAY\]'
 fi

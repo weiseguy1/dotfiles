@@ -7,3 +7,4 @@ shopt -q -s cdspell
 shopt -q -s extglob
 shopt -s histappend
 shopt -q -s cmdhist
+complete -C /usr/bin/terraform terraform
